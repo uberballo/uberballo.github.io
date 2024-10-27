@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Game dev, day 1"
+title:  "Game dev, part 1"
 date:   2024-10-24 17:45:00 +0300
 ---
 
