@@ -69,7 +69,7 @@ Now if we'd like to remove the solid points (Enemy moved, wall destroyed, etc.),
 
 ### Getting the path
 
-Now with the grid fully initiated, we can ask for a path. O is at `(7, 3)` and X is at `(4, 9)`.
+Now with the grid fully initiated, we can ask for a path. You need to give a starting and an ending point for the AStarGrid. Here in the example we will have two points, O and X. The O is at point `(7, 3)` and X is at `(4, 9)`.
 
 ```gdscript
 func _init_grid() -> void:
@@ -104,7 +104,9 @@ The `.get_point_path(from, target)` method then returns the exact points. Rememb
 
 ### Moving the object  
 
-Now that you have the path, you can use them in your game! Simple example of using the coordinates to move the object:  
+Now that you have the path, you can use them in your game! I'm using this same grid for the enemies and the players pathfinding. You just need to remember to update the solid points before and after moving. Otherwise even after moving, the grid thinks that there is an obstacle.  
+
+Here's a simple example of using the coordinates to move the object:  
 
 ```gdscript
 # We're using Node2D to access the 'position' property
